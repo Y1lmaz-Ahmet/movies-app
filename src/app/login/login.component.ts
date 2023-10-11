@@ -27,8 +27,8 @@ export class LoginComponent implements OnInit{
       this.errorMessage = "password is required"
     } else
     {
-      //navigate the user to endpoint 'movie' if username and password is correct
-      //endpoint movie if the logic value is true
+      //navigate the user to endpoint 'home' if username and password is correct
+      //endpoint home if the logic value is true
         this.errorMessage = ""
         let res = this.auth.login(this.username, this.password)
         if (res === 200)

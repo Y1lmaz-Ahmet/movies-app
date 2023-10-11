@@ -20,13 +20,13 @@ export class MovieComponent {
     this.type = this.route.snapshot.params['type'];
     this.id = this.route.snapshot.params['id'];
     if (this.type === 'trending') {
-      this.url = 'https://movies-app-ebon-ten.vercel.app/assets/data/trending-movies.json';
+      this.url = 'assets/data/trending-movies.json';
     }
     if (this.type === 'theatre') {
-      this.url = 'https://movies-app-ebon-ten.vercel.app/assets/data/theatre-movies.json';
+      this.url = 'assets/data/theatre-movies.json';
     }
     if (this.type === 'popular') {
-      this.url = 'https://movies-app-ebon-ten.vercel.app/assets/data/popular-movies.json';
+      this.url = 'assets/data/popular-movies.json';
     }
     this.getMovie();
   }

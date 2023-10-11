@@ -28,6 +28,9 @@
 				.cover {
 					img {
 						border-radius: 5px;
+						&:hover {
+							cursor: pointer;
+						}
 					}
 				}
 				.detail {

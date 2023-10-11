@@ -1,105 +1,162 @@
 .movie-container {
-  width: 1400px;
-  margin: 0 auto;
-  padding: 50px;
+  width: 100%;
+  padding: 2rem;
+
   .top {
     display: flex;
+    flex-wrap: wrap;
+
     .left {
-      width: 450px;
+      width: 100%;
+      max-width: 100%;
+
       .name {
-        font-size: 36px;
+        font-size: 2rem;
         font-weight: bold;
       }
+
       .rating {
         display: flex;
         align-items: center;
-        margin-bottom: 15px;
+        margin-bottom: 1rem;
+
         .rating-value {
-          margin-left: 20px;
+          margin-left: 1rem;
           font-weight: bold;
         }
       }
+
       .cover {
-        width: 400px;
-        height: 500px;
-        margin-right: 50px;
+        width: 300px;
+        max-width: 500px;
+        margin-right: 0;
         img {
           width: 100%;
-          height: 100%;
+          height: auto;
           object-fit: cover;
         }
       }
     }
+
     .right {
-      width: 900px;
-      padding-top: 100px;
+      width: 100%;
+
       .title {
-        margin-bottom: 30px;
+        margin-bottom: 1rem;
       }
+
       .rating-form {
         .form-group {
-          margin-top: 20px;
+          margin-top: 1rem;
+
           .rating {
-            margin-top: -13px;
+            margin-top: -0.7rem;
           }
+
           label {
             font-weight: bold;
-            margin-bottom: 5px;
+            margin-bottom: 0.5rem;
           }
+
           textarea {
-            resize: none;
+            resize: vertical;
           }
         }
+
         .btn-container {
-          margin-top: 30px;
+          margin-top: 2rem;
         }
       }
     }
   }
+
   .bottom {
-    margin-top: 50px;
+    margin-top: 2rem;
+
     .title {
-      margin-bottom: 30px;
+      margin-bottom: 1rem;
     }
+
     .reviews {
-      width: 1000px;
+      width: 100%;
+
       .review {
-        margin-bottom: 25px;
+        margin-bottom: 1rem;
         background-color: #f1f1f1;
-        padding: 20px;
+        padding: 1rem;
         border-radius: 5px;
+
         .review-details {
           display: flex;
+          flex-wrap: wrap;
           justify-content: space-between;
-          margin-bottom: 20px;
+          margin-bottom: 1rem;
+
           .review-left {
+            width: 100%;
+            max-width: 100%;
+
             .author {
-              font-size: 18px;
+              font-size: 1.125rem;
               font-weight: bold;
             }
+
             .author-dt {
               opacity: 0.7;
             }
           }
+
           .review-right {
+            width: 100%;
+            max-width: 100%;
+
             .rating {
               display: flex;
               align-items: center;
+
               .rating-value {
-                margin-left: 20px;
+                margin-left: 1rem;
                 font-weight: bold;
               }
             }
           }
         }
+
         .review-text {
           font-style: italic;
-          font-size: 18px;
+          font-size: 1.125rem;
         }
       }
+
       .no-reviews {
         font-style: italic;
-        font-size: 18px;
+        font-size: 1.125rem;
+      }
+    }
+  }
+}
+
+// Media query voor tablet
+@media screen and (max-width: 768px) {
+  .movie-container {
+    .top {
+      .left {
+        .name {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+// Media query voor desktop
+@media screen and (min-width: 1024px) {
+  .movie-container {
+    .top {
+      .left {
+        .name {
+          font-size: 3rem;
+        }
       }
     }
   }

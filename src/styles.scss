@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+font-family: 'Bai Jamjuree', sans-serif;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';

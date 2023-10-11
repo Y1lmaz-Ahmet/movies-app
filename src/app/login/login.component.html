@@ -1,3 +1,4 @@
+<!-- main container -->
 <div class="login-container">
 	<!-- logo & description  -->
 	<img class="film" src="/assets/film.png" alt="">
@@ -10,16 +11,21 @@
 		<!-- username -->
 		<div class="form-group">
 			<label for="username">username</label>
-			<input type="text" name="username" class="form-control">
+			<input type="text" name="username" class="form-control" [(ngModel)]="username" placeholder="username please">
 		</div>
 		<!-- password -->
 		<div class="form-group">
 			<label for="password">password</label>
-			<input type="password" name="password" class="form-control">
+			<input type="password" name="password" class="form-control" [(ngModel)]="password" placeholder="password please">
 		</div>
 		<!-- login button -->
 		<div class="btn-container">
-			<button class="btn btn-dark">login</button>
+			<!-- error message if required fields are false -->
+			<div class="error">
+				<p>{{errorMessage}}</p>
+			</div>
+			<button class="btn btn-dark" (click)="login()">login</button>
 		</div>
+		
 	</div>
 </div>

@@ -24,7 +24,6 @@ export class HomeComponent implements OnInit
       .subscribe((movies) =>
       {
         this.trendingMovies = movies
-        console.log(this.trendingMovies);
     })
   }
   getTheatreMovies()
@@ -33,7 +32,6 @@ export class HomeComponent implements OnInit
       .subscribe((movies) =>
       {
         this.theatreMovies = movies
-        console.log(this.theatreMovies);
     })
   }
   getPopularMovies()
@@ -42,7 +40,6 @@ export class HomeComponent implements OnInit
         .subscribe((movies) =>
         {
           this.popularMovies = movies
-          console.log(this.theatreMovies);
       })
     }
   goToMovie(type: string, id: string)

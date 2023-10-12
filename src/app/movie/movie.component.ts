@@ -14,19 +14,22 @@ export class MovieComponent {
   movies: any;
   movie: any;
 
+  trendingURL = "assets/data/trending-movies.json"
+  threatreMoviesURL = 'assets/data/theatre-movies.json'
+  popularMoviesURL = 'assets/data/popular-movies.json'
   constructor(private route: ActivatedRoute, private http: HttpClient) {}
 
   ngOnInit(): void {
     this.type = this.route.snapshot.params['type'];
     this.id = this.route.snapshot.params['id'];
     if (this.type === 'trending') {
-      this.url = 'assets/data/trending-movies.json';
+      this.url = this.trendingURL;
     }
     if (this.type === 'theatre') {
-      this.url = 'assets/data/theatre-movies.json';
+      this.url = this.threatreMoviesURL;
     }
     if (this.type === 'popular') {
-      this.url = 'assets/data/popular-movies.json';
+      this.url = this.popularMoviesURL;
     }
     this.getMovie();
   }
